@@ -4,9 +4,9 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest                                   #os
 
-    strategy:
+    strategy:                                                #language
       matrix:
         python-version: [3.8, 3.9]
 
@@ -22,7 +22,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
 
-    - name: Run tests
+    - name: Run tests                                           #run code
       run: |
         cd src
         python -m pytest addition.py
