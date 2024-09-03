@@ -10,14 +10,14 @@ jobs:
       matrix:
         python-version: [3.8, 3.9]
 
-    steps:
-    - uses: actions/checkout@v3
+    steps:  
+    - uses: actions/checkout@v3                                 #plugins
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Install dependencies
+    - name: Install dependencies                                #install packeages
       run: |
         python -m pip install --upgrade pip
         pip install pytest
